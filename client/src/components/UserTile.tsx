@@ -1,13 +1,12 @@
 import UserImg from '../assets/user.png'
 
-function UserTile({ height, width }: { height: string, width: string }) {
+function UserTile({ height }: { height: string }) {
     return <>
         <img src={UserImg} style={{
-            backgroundColor: 'red',
-            width,
+            width: 'auto',
             height,
             padding: 0,
-            margin: 0
+            margin: 0,
         }} />
     </>
 }

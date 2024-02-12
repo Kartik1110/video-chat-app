@@ -1,7 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
-import UserTile from "./components/UserTile";
+import ParticipantView from "./pages/ParticipantView";
+import HostView from "./pages/HostView";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,11 +15,12 @@ function App() {
       element: <Login />,
     },
     {
-      path: "/user",
-      element: <>
-        <UserTile height="50vh" width="50vh" />
-        <UserTile height="50vh" width="50vh" />
-      </>
+      path: "/participant",
+      element: <ParticipantView />
+    },
+    {
+      path: "/host",
+      element: <HostView />
     },
   ]);
   return <RouterProvider router={router} />;
