@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Box, Button, IconButton, InputAdornment } from "@mui/material";
+import { Box, Button, IconButton, InputAdornment, Typography } from "@mui/material";
 import styled from "@mui/styled-engine";
 import { TextField } from "@mui/material";
 import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const FormStyle = styled("form")(() => ({
   display: "grid",
@@ -96,9 +97,11 @@ const Signup = () => {
           })}
         />
 
+
         <Button onClick={handleSubmit(onSubmit)} variant="contained" disableElevation>
           Signup
         </Button>
+        <Typography>Already have an account?<Link to={"/login"} style={{ color: "blue", paddingLeft: '10px' }}>Login</Link></Typography>
       </FormStyle>
     </Box>
   );
